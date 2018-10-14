@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get "movies", to:"movies#index"
   post "movies", to:"movies#create"
   get "movies/new", to:"movies#new"
-  get "movies/:id", to:"movies#show"
+  get "movies/:id", to:"movies#show", as:"movie"
   get "movies/:id/edit", to:"movies#edit"
   put "movies/:id", to:"movies#update"
   patch "movies/:id", to:"movies#update"

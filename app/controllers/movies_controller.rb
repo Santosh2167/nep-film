@@ -3,10 +3,11 @@ class MoviesController < ApplicationController
   end
 
   def show
+    @movie = Movie.find(params[:id])
   end
 
   def create
-    @movie = Movie.new()
+    @movie = Movie.new(movie_params)
     # @movie.title = params[:movie]["title"]
     # render json: params[:movie]
     @movie.save
